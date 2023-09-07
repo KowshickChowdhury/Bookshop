@@ -1,0 +1,36 @@
+{{>header}}
+{{>navbar}}
+<body>
+    
+    
+<div class="d-flex form-inputs" style="padding: 5%; background-color:cadetblue">
+        <input class="form-control" type="text" placeholder="Search any Book...">
+        <i class="bx bx-search"></i>
+</div>
+    <div class="container">
+        <div class="row" style="background-color: rgb(39, 85, 75);">
+            <div class="col-sm-6">
+                {{#each bookpost}}
+            <b>{{this.bname}}</b>
+            <p>{{this.author}}</p>
+            <p>{{this.publisher}}</p>
+            <p>{{this.year}}</p>
+            {{/each}}
+            </div>
+            <div class="col-sm-6">
+                {{#each bookpost}}
+                <b>{{this.bname}}</b>
+            <p>{{this.author}}</p>
+            <p>{{this.publisher}}</p>
+            <p>{{this.year}}</p>
+            {{/each}}
+            </div>
+            
+                
+        
+        </div>
+    </div>
+            
+
+</body>
+</html>

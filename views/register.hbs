@@ -1,0 +1,22 @@
+{{>header}}
+<div class="container" style="padding: 5%; background-color: #24975c; ">
+    <div class="row" style="margin: 0 25rem 0 25rem">
+        <p>{{message}}</p>
+        
+    <form method="post" action="/submitform" enctype="multipart/form-data">
+    <input type="text" class="form-control" name="uname" style="margin-bottom: 2rem;"
+     placeholder="Enter your name" />
+
+    <input type="text" class="form-control" name="email" style="margin-bottom: 2rem;"
+     placeholder="Enter your email" />
+
+    <input type="password" class="form-control" name="pass" style="margin-bottom: 2rem;" 
+    placeholder="Enter password" />
+
+    <button class="btn btn-primary" style="margin-left: 26%;">Register</button>
+    </form>
+    </div>
+    <div class="row" style="margin: 0 25rem 0 25rem">
+        <h4 style="margin-left: 26%; margin-top: 2rem; font-weight: bold">Sign up</h4>
+    </div>
+</div>

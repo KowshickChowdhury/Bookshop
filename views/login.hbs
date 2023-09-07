@@ -1,0 +1,17 @@
+{{>header}}
+{{message}}
+<div class="container">
+    <div class="row" style="padding: 5%; background-color: #8982f9; ">
+        <h4 style="margin: 2rem 30rem 0 7rem;">User login</h4>
+        <form method="post" action="/submitlogin">
+            <input type="email" class="form-control" name="email" style="margin-bottom: 5%;" id=""
+             placeholder="Enter your email" />
+     
+            <input type="password" class="form-control" name="pass" style="margin-bottom: 5%;" 
+            placeholder="Enter your password" />
+
+            <button class="btn btn-submit btn btn-primary">Login here</button>
+        </form>
+        <a href="/adminlogin" style="background-color: #002a22; margin-top: 15%;">Admin Login</a>
+    </div>
+</div>

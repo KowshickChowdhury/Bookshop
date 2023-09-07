@@ -1,0 +1,107 @@
+{{>header}}
+<body>
+<!--Container -->
+<div class="container">
+    <div class="row">
+        <div class="mx-auto bg-grey-400 col-sm-6">
+    <!--Screen-->
+    <div class="min-h-screen flex flex-col">
+        <!--Header Section Starts Here-->
+        <header class="bg-nav">
+            <div class="flex justify-between">
+                <div class="p-1 mx-3 inline-flex items-center">
+                    <i class="fas fa-bars pr-2 text-white" onclick="sidebarToggle()"></i>
+                    <h1>Admin Dashboard</h1>
+                </div>
+                
+        </header>
+        <!--/Header-->
+
+        <div class="flex flex-1">
+            <!--Sidebar-->
+            <aside id="sidebar" class="bg-side-nav w-1/2 md:w-1/6 lg:w-1/6 border-r border-side-nav hidden md:block lg:block">
+
+                <ul class="list-reset flex flex-col">
+                    <li class=" w-full h-full py-3 px-2 border-b border-light-border bg-white">
+                        <a href="/admin"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-tachometer-alt float-left mx-2"></i>
+                            Dashboard
+                            <span><i class="fas fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/adminedit"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fab fa-wpforms float-left mx-2"></i>
+                            Edit profile
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="w-full h-full py-3 px-2 border-b border-light-border">
+                        <a href="/author"
+                           class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-grip-horizontal float-left mx-2"></i>
+                            Author
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                
+                    
+                    <li class="w-full h-full py-3 px-2 border-b border-300-border">
+                        <a href="/books" class="font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                            <i class="fas fa-square-full float-left mx-2"></i>
+                            Books
+                            <span><i class="fa fa-angle-right float-right"></i></span>
+                        </a>
+                    </li>
+                    
+                        <ul class="list-reset -mx-2 bg-white-medium-dark">
+                            <li class="border-t mt-2 border-light-border w-full h-full px-2 py-3">
+                                <a href="/adminlogin"
+                                   class="mx-4 font-sans font-hairline hover:font-normal text-sm text-nav-item no-underline">
+                                    Log out
+                                    <span><i class="fa fa-angle-right float-right"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </aside>
+            <!--/Sidebar-->
+        </div>
+
+    </div>
+</div>
+
+    </div>
+
+     <div class="col-sm-8">
+            <form method="post" action="/authoradd">
+            <h4 style="margin-top: 5%;">Author add</h4>
+            <input type="text" style="margin-top: 5%;" name="name" placeholder="Enter author name" />
+            <input type="date" style="margin-top: 5%;" name="birthday" placeholder="Enter author birth year" />
+            <input type="text" style="margin-top: 5%;" name="address" placeholder="Enter author adress" />
+            <button class="btn btn-info">Add</button>
+            </form>
+
+            {{#each author}}
+            <div class="col-sm-4" style="background-color: rgb(39, 85, 75);">
+                <b>{{this.id}}</b>
+                <b>{{this.name}}</b>
+                <p>{{this.birthday}}</p>
+                <p>{{this.address}}</p>
+            </div>
+            {{/each}}
+
+        </div>
+
+</div>
+
+
+
+
+<script src="admin/./main.js"></script>
+</body>
+        

@@ -1,0 +1,24 @@
+{{>header}}
+
+<body>
+    {{>navbar}}
+    <div class="container">
+        <div class="row">
+            <div style="margin-top: 10%; margin-left: 40%;">
+                <h4 style="margin-bottom: 5%;">Edit profile</h4>
+                <form method="post" action="/userupdate">
+            <input type="text" class="form-control" style="margin-bottom: 5%;"
+             placeholder="Update your name" name="uname" value="{{uname}}" />
+            <input type="text" class="form-control" style="margin-bottom: 5%;"
+             placeholder="Update your email" name="email" value="{{email}}" />
+            <input type="password" class="form-control" style="margin-bottom: 5%;"
+             placeholder="Update your password" name="pass" value="{{pass}}" />
+            <button type="submit" style="margin-bottom: 5%;" class="btn btn-primary">Update</button>
+        </form>
+            </div>
+        </div>
+    </div>
+
+
+        
+</body>
